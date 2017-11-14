@@ -1,2 +1,6 @@
-<h1>Articel#show</h1>
-<p>Find me in app/views/articel/show.html.erb</p>
+<h1>Title: <%= @articel.title %></h1>
+<p>Content: <%= @articel.content %></p>
+
+<%= link_to 'Edit', edit_articel_path(@articel) %>
+<%= link_to 'Delete', articel_path(@articel), method: :delete %>
+<%= link_to 'Back', articels_path %>

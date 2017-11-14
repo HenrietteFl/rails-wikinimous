@@ -1,4 +1,4 @@
-class ArticelController < ApplicationController
+class ArticelsController < ApplicationController
 before_action :set_articel, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -34,10 +34,10 @@ before_action :set_articel, only: [:show, :edit, :update, :destroy]
   end
 
   def articel_params
-    params.require(:articel).permit(:articel, :content, :date)
+    params.require(:articel).permit(:title, :content)
   end
 
   def set_articel
-    @task = Task.find(params[:id])
+    @articel = Articel.find(params[:id])
   end
 end

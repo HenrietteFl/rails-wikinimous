@@ -1,0 +1,9 @@
+<h1>Articels</h1>
+
+<ul>
+  <% @articels.each do |articel| %>
+  <li><%= articel.title %> (<%= link_to 'Content', articel_path(articel) %>)</li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add an article', new_articel_path %>
